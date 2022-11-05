@@ -3,7 +3,7 @@ import { toggleImportanceOf } from '../reducers/noteReducer'
 
 const Note = ({ note, handleClick }) => {
   return (
-    <li onClick={handleClick}>
+    <li  onClick={handleClick}>
       {note.content}
       <strong> {note.important ? 'important' : ''}</strong>
     </li>
@@ -12,7 +12,7 @@ const Note = ({ note, handleClick }) => {
 
 const Notes = () => {
   const dispatch = useDispatch()
-  const notes = useSelector(({notes,filter}) => {
+  const notes = useSelector(({ notes, filter }) => {
     if (filter === 'ALL') {
       return notes
     }
